@@ -9,12 +9,15 @@ class GuessingGame
   end
 
   def player_answer
-    @player_guess = gets.chomp.to_i
+    @player_guess = gets.chomp
+    if @player_guess == 'c'
+      puts "#{@game_number}"
+    end
   end
 
 
   def check_answer
-    while @player_guess != @game_number
+    while @player_guess.to_i != @game_number
       compare_lesser_or_greater_than
       compare_divisor
       puts "guess again"
@@ -32,7 +35,7 @@ class GuessingGame
   end
 
   def compare_lesser_or_greater_than
-    if @player_guess < @game_number
+    if @player_guess.to_i < @game_number
       puts "you answer is less than the right answer"
     else
       puts "you answer is more than the right answer"
