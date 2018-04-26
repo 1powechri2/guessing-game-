@@ -8,16 +8,24 @@ class GuessingGame
     @player_guess = 0
   end
 
-    puts "I have generated a random number for you to guess, what is your guess?"
 
   def player_answer
-    @player_guess = gets.chomp
+    @player_guess = gets.chomp.to_i
+  end
+
+  def compare_lesser_or_greater_than
+    if @player_guess < @game_number
+      puts "you answer is less than the right answer"
+    else
+      puts "you answer is more than the right answer"
+    end
   end
 
   def check_answer
     while @player_guess != @game_number
+      compare_lesser_or_greater_than
       puts "guess again"
-
+      player_answer
     end
   end
 end

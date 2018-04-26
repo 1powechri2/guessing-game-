@@ -16,11 +16,11 @@ class GuessingGameTest < Minitest::Test
   end
 
   def test_initialize_player_guess_equal_0
-    assert @game.player_guess == 0
+    assert @game.player_answer != nil
   end
 
   def test_player_answer
     @game.player_answer
-    assert @game.player_guess == 5 
+    assert @game.player_guess == 5
   end
 end
