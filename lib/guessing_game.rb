@@ -5,6 +5,7 @@ class GuessingGame
 
   def initialize
     @game_number  = rand(1..100) + 1
+    # What number range does the spec require?
     @player_guess = 0
   end
 
@@ -20,6 +21,7 @@ class GuessingGame
     while @player_guess.to_i != @game_number
       compare_lesser_or_greater_than
       compare_divisor
+      # These methods are a good use of delegating the 'if' logic out of things
       puts "guess again"
       player_answer
     end
