@@ -6,6 +6,18 @@ class GuessingGameTest < Minitest::Test
     @game = GuessingGame.new
   end
 
+  # This is a tricky thing to test.  I would suggest modifying the guessing game class and your tests so that it can behave in the
+  # way I have written the setup below. You will have to carefully modify it in such a way that you keep the base behavior around.
+  # The GuessingGame should be able to be given a correct answer when it is created for testing purposes.
+  # That way you will have a predefined correct answer you can test against, but you can still run it with a default argument.
+  # If you get stuck here, let me know and I can nudge you in the right direction.
+  #
+  # def setup
+  #   @number = rand(1..101) + 1
+  #   @game = GuessingGame.new(@number)
+  # end
+  #
+
   def test_it_exists
     assert_instance_of GuessingGame, @game
   end
