@@ -23,7 +23,7 @@ class GuessingGame
       puts "guess again"
       player_answer
     end
-    puts "You guessed the right number!"
+    puts "You have guessed the correct number!"
   end
 
   def compare_divisor
@@ -36,9 +36,9 @@ class GuessingGame
 
   def compare_lesser_or_greater_than
     if @player_guess.to_i < @game_number
-      puts "you answer is less than the right answer"
+      puts "your answer is less than the right answer"
     else
-      puts "you answer is more than the right answer"
+      puts "your answer is more than the right answer"
     end
   end
 end
